@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 2 The DAR Formula | The Art of DAR</title>
+<meta name="author" content="Andrew Bruce, RHIT, CPC, CPPM, RH-CBS">
+<meta name="description" content="2.1 The Numbers Needed to Calculate Days in AR You need only three numbers to calculate the average Days in AR. They are the Number of Days in the Period, the total Gross Charges for that period,...">
+<meta name="generator" content="bookdown 0.24.4 with bs4_book()">
+<meta property="og:title" content="Chapter 2 The DAR Formula | The Art of DAR">
+<meta property="og:type" content="book">
+<meta property="og:description" content="2.1 The Numbers Needed to Calculate Days in AR You need only three numbers to calculate the average Days in AR. They are the Number of Days in the Period, the total Gross Charges for that period,...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 2 The DAR Formula | The Art of DAR">
+<meta name="twitter:description" content="2.1 The Numbers Needed to Calculate Days in AR You need only three numbers to calculate the average Days in AR. They are the Number of Days in the Period, the total Gross Charges for that period,...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Days in Accounts Receivable in the Healthcare Revenue Cycle">The Art of DAR</a>:
+        <small class="text-muted">Days in Accounts Receivable in the Healthcare Revenue Cycle</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="introduction-to-dar.html"><span class="header-section-number">1</span> Introduction to DAR</a></li>
+<li><a class="active" href="the-dar-formula.html"><span class="header-section-number">2</span> The DAR Formula</a></li>
+<li><a class="" href="building-on-the-dar-formula.html"><span class="header-section-number">3</span> Building on the DAR Formula</a></li>
+<li><a class="" href="the-dar-ratio.html"><span class="header-section-number">4</span> The DAR Ratio</a></li>
+<li><a class="" href="blocks.html"><span class="header-section-number">5</span> Blocks</a></li>
+<li><a class="" href="sharing-your-book.html"><span class="header-section-number">6</span> Sharing your book</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="the-dar-formula" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> The DAR Formula<a class="anchor" aria-label="anchor" href="#the-dar-formula"><i class="fas fa-link"></i></a>
+</h1>
+<div id="the-numbers-needed-to-calculate-days-in-ar" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> The Numbers Needed to Calculate Days in AR<a class="anchor" aria-label="anchor" href="#the-numbers-needed-to-calculate-days-in-ar"><i class="fas fa-link"></i></a>
+</h2>
+<p>You need only <strong><em>three</em></strong> numbers to calculate the average <strong>Days in AR</strong>. They are the <em>Number of Days in the Period</em>, the <em>total Gross Charges</em> for that period, and the <em>Ending AR Balance</em>. You will also need the <em>Average Daily Charge</em>, but you can derive this number from two of the three essential numbers:</p>
+<div id="number-of-days-in-the-period" class="section level3" number="2.1.1">
+<h3>
+<span class="header-section-number">2.1.1</span> Number of Days in the Period<a class="anchor" aria-label="anchor" href="#number-of-days-in-the-period"><i class="fas fa-link"></i></a>
+</h3>
+<p>This is literally the number of days within the period for which you are measuring <em>Days in AR</em>. DAR is typically measured in monthly and quarterly increments, so this number will usually hover around 30, 60, 90, etc.</p>
+</div>
+<div id="total-gross-charges" class="section level3" number="2.1.2">
+<h3>
+<span class="header-section-number">2.1.2</span> Total Gross Charges<a class="anchor" aria-label="anchor" href="#total-gross-charges"><i class="fas fa-link"></i></a>
+</h3>
+<p>Gross charges, which are usually the <em>full</em> fee schedule<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;A list of fees physicians establish as the fair price for the services they provide. Keep in mind that it is not the same as a payment schedule.&lt;/p&gt;"><sup>3</sup></a> charges, are typically all charges generated by the practice, regardless of actual reimbursement. This figure is the total dollar amount charged during the <em>Number of Days in the Period</em> you are measuring. Whether billed to insurance on a claim or to a self-pay patient, all charges for the period are included here.</p>
+</div>
+<div id="average-daily-charge" class="section level3" number="2.1.3">
+<h3>
+<span class="header-section-number">2.1.3</span> Average Daily Charge<a class="anchor" aria-label="anchor" href="#average-daily-charge"><i class="fas fa-link"></i></a>
+</h3>
+<p>This number is the <em>total Gross Charges</em> amount divided by the <em>Number of Days in the Period</em>.</p>
+</div>
+<div id="ending-ar-balance" class="section level3" number="2.1.4">
+<h3>
+<span class="header-section-number">2.1.4</span> Ending AR Balance<a class="anchor" aria-label="anchor" href="#ending-ar-balance"><i class="fas fa-link"></i></a>
+</h3>
+<p>This is the AR balance at the close of business on the final day of the <em>Period</em> that you are measuring.</p>
+</div>
+</div>
+<div id="step-by-step-example-of-the-dar-formula" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> Step-by-Step Example of the DAR Formula<a class="anchor" aria-label="anchor" href="#step-by-step-example-of-the-dar-formula"><i class="fas fa-link"></i></a>
+</h2>
+<p><br></p>
+<p>Let’s go through an example of the DAR calculation step-by-step. The following table contains the <strong>three</strong> data points you need to calculate Days in AR: <br></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<caption>The three data points needed to calculate DAR.</caption>
+<thead><tr class="header">
+<th align="center"><strong>Number of Days in Period</strong></th>
+<th align="center"><strong>Gross Charges</strong></th>
+<th align="center"><strong>Ending AR Balance</strong></th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">30</td>
+<td align="center">$131,440.30</td>
+<td align="center">$203,460.50</td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div id="calculate-the-average-daily-charge" class="section level3" number="2.2.1">
+<h3>
+<span class="header-section-number">2.2.1</span> Calculate the Average Daily Charge<a class="anchor" aria-label="anchor" href="#calculate-the-average-daily-charge"><i class="fas fa-link"></i></a>
+</h3>
+<p>First, we need to calculate the <strong>Average Daily Charge</strong>. The formula is as follows:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\dfrac {\textrm{Gross Charges}}{\textrm{Number of Days in Period}} = {\textrm{Average Daily Charge}}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>So, if we take the <strong>Gross Charges</strong> from the table above and divide it by the <strong>Number of Days in the Period</strong>, our <strong>Average Daily Charge</strong> will be <strong>$4,381.34</strong>:</p>
+<p><br></p>
+<p><br></p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
+<span class="co">## GCt divided by NDiP equals ADC</span>
+
+<span class="fl">131440.30</span><span class="op">/</span><span class="fl">30</span></code></pre></div>
+<p>[1] 4381.343</p>
+<p><br></p>
+<p><span class="math display">\[
+\dfrac{131,440.28}{30}= 4,381.34
+\]</span></p>
+<p><br></p>
+</div>
+<div id="calculate-the-days-in-ar" class="section level3" number="2.2.2">
+<h3>
+<span class="header-section-number">2.2.2</span> Calculate the Days in AR<a class="anchor" aria-label="anchor" href="#calculate-the-days-in-ar"><i class="fas fa-link"></i></a>
+</h3>
+<p>Now that we have the three variables required by the DAR formula, we can calculate the <strong>Days in AR</strong>. Remember, our formula is:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\dfrac {\textrm{Ending AR Balance}}{\textrm{Average Daily Charge}}= {\textrm{Days in AR}}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>We’ll substitute the <strong>Ending AR Balance</strong> and <strong>Average Daily Charge</strong> into the above formula and divide. This will give us an average <strong>Days in AR</strong> of <strong>46.44</strong> days:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
+<span class="co"># EARB divided by ADC equals DAR</span>
+
+<span class="fl">203460.50</span><span class="op">/</span><span class="fl">4381.34</span>
+<span class="co">#&gt; [1] 46.43796</span></code></pre></div>
+<p><span class="math display">\[
+\dfrac{203,460.50}{4,381.34}= 46.44
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>Now our report table looks like this:</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="center"><strong>Days in Period</strong></th>
+<th align="center"><strong>Gross Charges</strong></th>
+<th align="center"><strong>Ending AR</strong></th>
+<th align="center"><strong>Avg Daily Charge</strong></th>
+<th align="center"><strong>Days in AR</strong></th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">30</td>
+<td align="center">$131,440.30</td>
+<td align="center">$203,460.50</td>
+<td align="center">$4,381.34</td>
+<td align="center">46.44</td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+
+</div>
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="introduction-to-dar.html"><span class="header-section-number">1</span> Introduction to DAR</a></div>
+<div class="next"><a href="building-on-the-dar-formula.html"><span class="header-section-number">3</span> Building on the DAR Formula</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#the-dar-formula"><span class="header-section-number">2</span> The DAR Formula</a></li>
+<li>
+<a class="nav-link" href="#the-numbers-needed-to-calculate-days-in-ar"><span class="header-section-number">2.1</span> The Numbers Needed to Calculate Days in AR</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#number-of-days-in-the-period"><span class="header-section-number">2.1.1</span> Number of Days in the Period</a></li>
+<li><a class="nav-link" href="#total-gross-charges"><span class="header-section-number">2.1.2</span> Total Gross Charges</a></li>
+<li><a class="nav-link" href="#average-daily-charge"><span class="header-section-number">2.1.3</span> Average Daily Charge</a></li>
+<li><a class="nav-link" href="#ending-ar-balance"><span class="header-section-number">2.1.4</span> Ending AR Balance</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#step-by-step-example-of-the-dar-formula"><span class="header-section-number">2.2</span> Step-by-Step Example of the DAR Formula</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#calculate-the-average-daily-charge"><span class="header-section-number">2.2.1</span> Calculate the Average Daily Charge</a></li>
+<li><a class="nav-link" href="#calculate-the-days-in-ar"><span class="header-section-number">2.2.2</span> Calculate the Days in AR</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/02-dar_formula.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/02-dar_formula.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>The Art of DAR</strong>: Days in Accounts Receivable in the Healthcare Revenue Cycle" was written by Andrew Bruce, RHIT, CPC, CPPM, RH-CBS. It was last built on 2021-11-30.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 3 Building on the DAR Formula | The Art of DAR</title>
+<meta name="author" content="Andrew Bruce, RHIT, CPC, CPPM, RH-CBS">
+<meta name="description" content="Now that we have gone through the basic formula and have some sample results, we can expand upon and rearrange this formula to do many other things. If we include the calculation for the Average...">
+<meta name="generator" content="bookdown 0.24.4 with bs4_book()">
+<meta property="og:title" content="Chapter 3 Building on the DAR Formula | The Art of DAR">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Now that we have gone through the basic formula and have some sample results, we can expand upon and rearrange this formula to do many other things. If we include the calculation for the Average...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 3 Building on the DAR Formula | The Art of DAR">
+<meta name="twitter:description" content="Now that we have gone through the basic formula and have some sample results, we can expand upon and rearrange this formula to do many other things. If we include the calculation for the Average...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Days in Accounts Receivable in the Healthcare Revenue Cycle">The Art of DAR</a>:
+        <small class="text-muted">Days in Accounts Receivable in the Healthcare Revenue Cycle</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="introduction-to-dar.html"><span class="header-section-number">1</span> Introduction to DAR</a></li>
+<li><a class="" href="the-dar-formula.html"><span class="header-section-number">2</span> The DAR Formula</a></li>
+<li><a class="active" href="building-on-the-dar-formula.html"><span class="header-section-number">3</span> Building on the DAR Formula</a></li>
+<li><a class="" href="the-dar-ratio.html"><span class="header-section-number">4</span> The DAR Ratio</a></li>
+<li><a class="" href="blocks.html"><span class="header-section-number">5</span> Blocks</a></li>
+<li><a class="" href="sharing-your-book.html"><span class="header-section-number">6</span> Sharing your book</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="building-on-the-dar-formula" class="section level1" number="3">
+<h1>
+<span class="header-section-number">3</span> Building on the DAR Formula<a class="anchor" aria-label="anchor" href="#building-on-the-dar-formula"><i class="fas fa-link"></i></a>
+</h1>
+<p>Now that we have gone through the basic formula and have some sample results, we can expand upon and rearrange this formula to do many other things. If we include the calculation for the <strong>Average Daily Charge</strong> in our DAR formula, it looks like this:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\dfrac {\textrm{Ending AR Balance}}{\textrm{Gross Charges} \div \textrm{Number of Days in Period}}={\textrm{Days in AR}}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>To simplify things a bit, I’m going to begin using mathematical variables and acronyms for these numbers. They are as follows:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<caption>DAR Formula Components.</caption>
+<thead><tr class="header">
+<th align="center"><strong>Variable</strong></th>
+<th align="center"><strong>Acronym</strong></th>
+<th align="left"><strong>Description</strong></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(n\)</span></td>
+<td align="center"><code>NDiP</code></td>
+<td align="left">Number of Days in the Period</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(x\)</span></td>
+<td align="center"><code>GCt</code></td>
+<td align="left">Total Gross Charges for <code>NDiP</code>
+</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(y\)</span></td>
+<td align="center"><code>EARB</code></td>
+<td align="left">Ending AR Balance</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(c\)</span></td>
+<td align="center"><code>ADC</code></td>
+<td align="left">Average Daily Charge for <code>NDiP</code>
+</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(z\)</span></td>
+<td align="center"><code>DAR</code></td>
+<td align="left">Days in AR</td>
+</tr>
+</tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div id="ending-ar-balance-required-for-x-dar" class="section level2" number="3.1">
+<h2>
+<span class="header-section-number">3.1</span> Ending AR Balance Required for <span class="math inline">\(x\)</span> DAR<a class="anchor" aria-label="anchor" href="#ending-ar-balance-required-for-x-dar"><i class="fas fa-link"></i></a>
+</h2>
+<p>What if we wanted to know the exact <strong>Ending AR Balance</strong> we’d need to attain a certain number of <strong>Days in AR</strong>? Let’s take our table of results from the previous example and set up the calculation for this. Our results were:</p>
+<p><span class="math display">\[\\[1pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="center">
+<strong>NDiP</strong> (<span class="math inline">\(n\)</span>)</th>
+<th align="center">
+<strong>GCt</strong> (<span class="math inline">\(x\)</span>)</th>
+<th align="center">
+<strong>EARB</strong> (<span class="math inline">\(y\)</span>)</th>
+<th align="center">
+<strong>ADC</strong> (<span class="math inline">\(c\)</span>)</th>
+<th align="center">
+<strong>DAR</strong> (<span class="math inline">\(z\)</span>)</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">30</td>
+<td align="center">$131,440.30</td>
+<td align="center">$203,460.50</td>
+<td align="center">$4,381.34</td>
+<td align="center">46.44</td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>Next, we have our DAR formula, which we’ll convert to variables to make it easier to visualize what’s going on mathematically:</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\textrm{If:}} \ \ \
+\dfrac {\textrm{EARB}}{\textrm{GCt} \div \textrm{NDiP}}&amp;={\textrm{DAR}} \\
+\\
+\\
+{\textrm{Where:}}\ \ \
+{\textrm{EARB}}&amp;=y\\ \ \
+{\textrm{GCt}}&amp;=x\\ \ \
+{\textrm{NDiP}}&amp;=n\\ \ \
+{\textrm{DAR}}&amp;=z\\ \ \
+\\
+\\
+{\textrm{Then:}} \ \ \
+\dfrac {y}{x \div n}&amp;={z} \\
+\end{aligned}
+\]</span> <span class="math display">\[\\[3pt]\]</span> Next, we need to find the formula for <code>EARB</code>, which we can do by taking the formula for <code>DAR</code> and solving for <span class="math inline">\(y\)</span>, which gives us:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\dfrac {zx}{n}={y}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>Let’s look at our table again, but this time let’s say that we would like to have achieved a <code>DAR</code> of <strong>39.44.</strong> What <strong>Ending AR Balance</strong> would we have needed to achieve this result?</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<caption>Calculate EARB Required for <span class="math inline">\(x\)</span> DAR.</caption>
+<thead><tr class="header">
+<th align="center">
+<strong>NDiP</strong> (<span class="math inline">\(n\)</span>)</th>
+<th align="center">
+<strong>GCt</strong> (<span class="math inline">\(x\)</span>)</th>
+<th align="center">
+<strong>EARB</strong> (<span class="math inline">\(y\)</span>)</th>
+<th align="center">
+<strong>ADC</strong> (<span class="math inline">\(c\)</span>)</th>
+<th align="center">
+<strong><em>Desired DAR</em></strong> (<span class="math inline">\(z\)</span>)</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">30</td>
+<td align="center">$131,440.30</td>
+<td align="center"><em>?</em></td>
+<td align="center">$4,381.34</td>
+<td align="center"><strong><em>39.44</em></strong></td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>If we plug our known variables into our formula for EARB, we get an <code>EARB</code> of <strong>$172,800.18</strong>. This is the Ending AR Balance needed to achieve <strong>39.44</strong> Days in AR, given the other variables.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
+<span class="co"># DAR multiplied by GCt, then divided by NDiP, equals EARB</span>
+
+<span class="op">(</span><span class="fl">39.44</span><span class="op">*</span><span class="fl">131440.30</span><span class="op">)</span><span class="op">/</span><span class="fl">30</span>
+<span class="co">#&gt; [1] 172800.2</span></code></pre></div>
+<p><span class="math display">\[
+\dfrac {39.44 \times 131,440.30}{30}={172,800.18}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+</div>
+<div id="total-gross-charges-required-for-x-dar" class="section level2" number="3.2">
+<h2>
+<span class="header-section-number">3.2</span> Total Gross Charges Required for <span class="math inline">\(x\)</span> DAR<a class="anchor" aria-label="anchor" href="#total-gross-charges-required-for-x-dar"><i class="fas fa-link"></i></a>
+</h2>
+<p>We can perform the same steps if we wanted to know the <strong>total Gross Charges</strong> we’d need to attain a certain number of <strong>Days in AR</strong>. Let’s again take our original table of results and set up the calculation:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="center">
+<strong>NDiP</strong> (<span class="math inline">\(n\)</span>)</th>
+<th align="center">
+<strong>GCt</strong> (<span class="math inline">\(x\)</span>)</th>
+<th align="center">
+<strong>EARB</strong> (<span class="math inline">\(y\)</span>)</th>
+<th align="center">
+<strong>ADC</strong> (<span class="math inline">\(c\)</span>)</th>
+<th align="center">
+<strong>DAR</strong> (<span class="math inline">\(z\)</span>)</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">30</td>
+<td align="center">$131,440.30</td>
+<td align="center">$203,460.50</td>
+<td align="center">$4,381.34</td>
+<td align="center">46.44</td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>We have our DAR formula converted to variables:</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\textrm{If:}} \ \ \
+\dfrac {\textrm{EARB}}{\textrm{GCt} \div \textrm{NDiP}}&amp;={\textrm{DAR}} \\
+\\
+\\
+{\textrm{Where:}}\ \ \
+{\textrm{EARB}}&amp;=y\\ \ \
+{\textrm{GCt}}&amp;=x\\ \ \
+{\textrm{NDiP}}&amp;=n\\ \ \
+{\textrm{DAR}}&amp;=z\\ \ \
+\\
+\\
+{\textrm{Then:}} \ \ \
+\dfrac {y}{x \div n}&amp;={z} \\
+\end{aligned}
+\]</span> <span class="math display">\[\\[3pt]\]</span></p>
+<p>To find the formula for <code>GCt</code>, we take the formula for <code>DAR</code> and solve for <span class="math inline">\(x\)</span>, giving us:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\dfrac {yn}{z}={x}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>Looking back at our table, we would again like to have achieved a <code>DAR</code> of <strong>39.44.</strong> What <strong>total Gross Charges</strong> would we have needed to achieve this result?</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<caption>Calculate GCt Required for <span class="math inline">\(x\)</span> DAR.</caption>
+<thead><tr class="header">
+<th align="center">
+<strong>NDiP</strong> (<span class="math inline">\(n\)</span>)</th>
+<th align="center">
+<strong>GCt</strong> (<span class="math inline">\(x\)</span>)</th>
+<th align="center">
+<strong>EARB</strong> (<span class="math inline">\(y\)</span>)</th>
+<th align="center">
+<strong>ADC</strong> (<span class="math inline">\(c\)</span>)</th>
+<th align="center">
+<strong><em>Desired DAR</em></strong> (<span class="math inline">\(z\)</span>)</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">30</td>
+<td align="center"><em>?</em></td>
+<td align="center">$203,460.50</td>
+<td align="center">$4,381.34</td>
+<td align="center"><strong><em>39.44</em></strong></td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>If we plug our known variables into our formula for <strong>total Gross Charges</strong>, we get a <code>GCt</code> of <strong>$154,762.04</strong>. As the <strong>Average Daily Charge</strong> is determined in part by <code>GCt</code>, this calculation will also change it, to <strong>$5,158.74</strong>.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
+<span class="co"># EARB multiplied by NDiP, then divided by DAR equals GCt</span>
+
+<span class="op">(</span><span class="fl">203460.50</span><span class="op">*</span><span class="fl">30</span><span class="op">)</span><span class="op">/</span><span class="fl">39.44</span>
+<span class="co">#&gt; [1] 154762</span>
+
+<span class="co"># GCt divided by NDiP equals ADC</span>
+
+<span class="fl">154762.04</span><span class="op">/</span><span class="fl">30</span>
+<span class="co">#&gt; [1] 5158.735</span></code></pre></div>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac {203,460.50 \times 30}{39.44}&amp;={154,762.04}\\
+\\
+\\
+\dfrac {154,762.04}{30}&amp;={5,158.74}
+\end{aligned}
+\]</span> <span class="math display">\[\\[3pt]\]</span></p>
+</div>
+<div id="number-of-days-required-for-x-dar" class="section level2" number="3.3">
+<h2>
+<span class="header-section-number">3.3</span> Number of Days Required for <span class="math inline">\(x\)</span> DAR<a class="anchor" aria-label="anchor" href="#number-of-days-required-for-x-dar"><i class="fas fa-link"></i></a>
+</h2>
+<p>We can perform the same steps if we wanted to know the <strong>Number of Days</strong> we’d need to attain a certain number of <strong>Days in AR</strong>. Let’s again take our original table of results and set up the calculation:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="center">
+<strong>NDiP</strong> (<span class="math inline">\(n\)</span>)</th>
+<th align="center">
+<strong>GCt</strong> (<span class="math inline">\(x\)</span>)</th>
+<th align="center">
+<strong>EARB</strong> (<span class="math inline">\(y\)</span>)</th>
+<th align="center">
+<strong>ADC</strong> (<span class="math inline">\(c\)</span>)</th>
+<th align="center">
+<strong>DAR</strong> (<span class="math inline">\(z\)</span>)</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">30</td>
+<td align="center">$131,440.30</td>
+<td align="center">$203,460.50</td>
+<td align="center">$4,381.34</td>
+<td align="center">46.44</td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>We have our DAR formula converted to variables:</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\textrm{If:}} \ \ \
+\frac {\textrm{EARB}}{\textrm{GCt} \div \textrm{NDiP}}&amp;={\textrm{DAR}} \\
+\\
+\\
+{\textrm{Where:}}\ \ \
+{\textrm{EARB}}&amp;=y\\ \ \
+{\textrm{GCt}}&amp;=x\\ \ \
+{\textrm{NDiP}}&amp;=n\\ \ \
+{\textrm{DAR}}&amp;=z\\ \ \
+\\
+\\
+{\textrm{Then:}} \ \ \
+\frac {y}{x \div n}&amp;={z} \\
+\end{aligned}
+\]</span> <span class="math display">\[\\[3pt]\]</span></p>
+<p>To find the formula for <code>NDiP</code>, we take the formula for <code>DAR</code> and solve for <span class="math inline">\(n\)</span>, giving us:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\frac {zx}{y}={n}
+\]</span> <span class="math display">\[\\[3pt]\]</span></p>
+<p>Looking back at our table, we would again like to have achieved a <code>DAR</code> of <strong>39.44.</strong> What <strong>Number of Days in the Period</strong> would we have needed to achieve this result?</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<caption>Calculate NDiP Required for <span class="math inline">\(x\)</span> DAR.</caption>
+<thead><tr class="header">
+<th align="center">
+<strong>NDiP</strong> (<span class="math inline">\(n\)</span>)</th>
+<th align="center">
+<strong>GCt</strong> (<span class="math inline">\(x\)</span>)</th>
+<th align="center">
+<strong>EARB</strong> (<span class="math inline">\(y\)</span>)</th>
+<th align="center">
+<strong>ADC</strong> (<span class="math inline">\(c\)</span>)</th>
+<th align="center">
+<strong><em>Desired DAR</em></strong> (<span class="math inline">\(z\)</span>)</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center"><em>?</em></td>
+<td align="center">$131,440.30</td>
+<td align="center">$203,460.50</td>
+<td align="center">$4,381.34</td>
+<td align="center"><strong>39.44</strong></td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>If we plug our known variables into our formula for total Gross Charges, we get an <code>NDiP</code> of <strong>25.48</strong>. As the <strong>Average Daily Charge</strong> is determined in part by <code>NDiP</code>, this calculation will also change it, to <strong>$5,158.57</strong>.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
+<span class="co"># DAR multiplied by GCt, then divided by EARB, equals NDiP</span>
+
+<span class="op">(</span><span class="fl">39.44</span><span class="op">*</span><span class="fl">131440.30</span><span class="op">)</span><span class="op">/</span><span class="fl">203460.50</span>
+<span class="co">#&gt; [1] 25.47917</span>
+
+<span class="co"># GCt divided by NDiP equals ADC</span>
+
+<span class="fl">131440.30</span><span class="op">/</span><span class="fl">25.48</span>
+<span class="co">#&gt; [1] 5158.568</span></code></pre></div>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac {39.44 \times 131,440.30}{203,460.50}&amp;={25.48}\\
+\\
+\\
+\dfrac {131,440.30}{25.48}&amp;={5,158.57}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+</div>
+<div id="average-daily-charge-required-for-x-dar" class="section level2" number="3.4">
+<h2>
+<span class="header-section-number">3.4</span> Average Daily Charge Required for <span class="math inline">\(x\)</span> DAR<a class="anchor" aria-label="anchor" href="#average-daily-charge-required-for-x-dar"><i class="fas fa-link"></i></a>
+</h2>
+<p>This formula is going to be a bit different from the previous three. Remember, our formula for the <strong>Average Daily Charge</strong> is:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\dfrac {\textrm{Gross Charges}}{\textrm{Number of Days in Period}} = {\textrm{Average Daily Charge}}
+\]</span> <span class="math display">\[\\[3pt]\]</span></p>
+<p>Let’s take our DAR formula and make the appropriate adjustments:</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\textrm{If:}} \ \ \
+\dfrac {\textrm{EARB}}{\textrm{ADC}}&amp;={\textrm{DAR}} \\
+\\
+\\
+{\textrm{Where:}}\ \ \
+{\textrm{EARB}}&amp;=y\\ \ \
+{\textrm{ADC}}&amp;=c\\ \ \
+{\textrm{DAR}}&amp;=z\\ \ \
+\\
+\\
+{\textrm{Then:}} \ \ \
+\dfrac {y}{c}&amp;={z} \\
+\end{aligned}
+\]</span> <span class="math display">\[\\[3pt]\]</span></p>
+<p>To find the formula for <code>ADC</code>, we take the formula for <code>DAR</code> and solve for <span class="math inline">\(c\)</span>, giving us: <span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\dfrac {y}{z}={c}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>Looking back at our table, we would again like to have achieved a <code>DAR</code> of <strong>39.44.</strong></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="center">
+<strong>NDiP</strong> (<span class="math inline">\(n\)</span>)</th>
+<th align="center">
+<strong>GCt</strong> (<span class="math inline">\(x\)</span>)</th>
+<th align="center">
+<strong>EARB</strong> (<span class="math inline">\(y\)</span>)</th>
+<th align="center">
+<strong>ADC</strong> (<span class="math inline">\(c\)</span>)</th>
+<th align="center">
+<strong>DAR</strong> (<span class="math inline">\(z\)</span>)</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">30</td>
+<td align="center">$131,440.30</td>
+<td align="center">$203,460.50</td>
+<td align="center">$4,381.34</td>
+<td align="center">46.44</td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>What <strong>Average Daily Charge</strong> would we have needed to achieve this result?</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<caption>Calculate ADC Required for <span class="math inline">\(x\)</span> DAR.</caption>
+<thead><tr class="header">
+<th align="center">
+<strong>NDiP</strong> (<span class="math inline">\(n\)</span>)</th>
+<th align="center">
+<strong>GCt</strong> (<span class="math inline">\(x\)</span>)</th>
+<th align="center">
+<strong>EARB</strong> (<span class="math inline">\(y\)</span>)</th>
+<th align="center">
+<strong>ADC</strong> (<span class="math inline">\(c\)</span>)</th>
+<th align="center">
+<strong><em>Desired DAR</em></strong> (<span class="math inline">\(z\)</span>)</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">30</td>
+<td align="center">$131,440.30</td>
+<td align="center">$203,460.50</td>
+<td align="center"><em>?</em></td>
+<td align="center"><strong>39.44</strong></td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>If we plug our known variables into our formula for <strong>Average Daily Charge</strong>, we get an <code>ADC</code> of <strong>$5,158.74</strong>. As a change in <code>ADC</code> will effect <code>GCt</code>, we’ll use the <code>ADC</code>-centric formula for <code>GCt</code> to calculate it, giving us <strong>$154,762.05</strong>.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
+<span class="co"># EARB divided by DAR equals ADC</span>
+
+<span class="fl">203460.50</span><span class="op">/</span><span class="fl">39.44</span>
+<span class="co">#&gt; [1] 5158.735</span>
+
+<span class="co"># NDiP multiplied by ADC equals GCt</span>
+
+<span class="fl">30</span><span class="op">*</span><span class="fl">5158.735</span>
+<span class="co">#&gt; [1] 154762</span></code></pre></div>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac {203,460.50}{39.44}&amp;={5,158.74}\\
+\\
+\\
+{30 \times 5,158.74}&amp;={154,762.05}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+</div>
+<div id="average-daily-charge-related-formulas" class="section level2" number="3.5">
+<h2>
+<span class="header-section-number">3.5</span> Average Daily Charge-Related Formulas<a class="anchor" aria-label="anchor" href="#average-daily-charge-related-formulas"><i class="fas fa-link"></i></a>
+</h2>
+<p>For completeness’ sake I’m going to include the formulas for <code>EARB</code>, <code>NDiP</code>, and <code>GCt</code> that include the <code>ADC</code> variable (<span class="math inline">\(c\)</span>):</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\textrm{Where:}}\ \ \
+{\textrm{EARB}}&amp;=y\\ \ \
+{\textrm{NDiP}}&amp;=n\\ \ \
+{\textrm{GCt}}&amp;=x\\ \ \
+{\textrm{ADC}}&amp;=c\\ \ \
+{\textrm{DAR}}&amp;=z\\ \ \
+\\
+\\
+{\textrm{Then:}} \ \ \
+{z \times c}&amp;={y} \\
+{x \div c}&amp;={n} \\
+{n \times c}&amp;={x} \\
+\end{aligned}
+\]</span> <span class="math display">\[\\[3pt]\]</span></p>
+<p>We’ll test these out to make sure everything’s in order:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="center">
+<strong>NDiP</strong> (<span class="math inline">\(n\)</span>)</th>
+<th align="center">
+<strong>GCt</strong> (<span class="math inline">\(x\)</span>)</th>
+<th align="center">
+<strong>EARB</strong> (<span class="math inline">\(y\)</span>)</th>
+<th align="center">
+<strong>ADC</strong> (<span class="math inline">\(c\)</span>)</th>
+<th align="center">
+<strong>DAR</strong> (<span class="math inline">\(z\)</span>)</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">30</td>
+<td align="center">$131,440.30</td>
+<td align="center">$203,460.50</td>
+<td align="center">$4,381.34</td>
+<td align="center">46.44</td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
+<span class="co"># 1. DAR multiplied by ADC = EARB</span>
+<span class="fl">46.43793010499292</span><span class="op">*</span><span class="fl">4381.343</span>
+<span class="co">#&gt; [1] 203460.5</span>
+
+<span class="co"># 2. GCt divided by ADC equals NDiP</span>
+<span class="fl">131440.30</span><span class="op">/</span><span class="fl">4381.343</span>
+<span class="co">#&gt; [1] 30</span>
+
+<span class="co"># 3. NDiP multiplied by ADC equals GCt</span>
+<span class="fl">30</span><span class="op">*</span><span class="fl">4381.343</span>
+<span class="co">#&gt; [1] 131440.3</span></code></pre></div>
+<p>And, as you can see, everything adds up. One note is that you do want to be mindful to include the entire number and every one of its decimals in the calculations for accuracy, then round up afterwards. Hopefully by now, you’re beginning to see some patterns emerging that begin to illustrate the relationship between all of the variables that make up the DAR calculation.</p>
+</div>
+<div id="relationship-between-the-dar-variables" class="section level2" number="3.6">
+<h2>
+<span class="header-section-number">3.6</span> Relationship Between the DAR Variables<a class="anchor" aria-label="anchor" href="#relationship-between-the-dar-variables"><i class="fas fa-link"></i></a>
+</h2>
+<p>If you noticed, we now have two different formulas for the <strong>Average Daily Charge</strong>:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac {\textrm{GCt}}{\textrm{NDiP}} &amp;= {\textrm{ADC}}
+\\
+\\
+\\
+\dfrac {\textrm{EARB}}{\textrm{DAR}} &amp;= {\textrm{ADC}}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>If these are both true, then we can assume that both of the following equations are true:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac {\textrm{GCt}}{\textrm{NDiP}} &amp;= \dfrac {\textrm{EARB}}{\textrm{DAR}}
+\\
+\\
+\\
+\dfrac {\textrm{DAR}}{\textrm{NDiP}} &amp;= \dfrac {\textrm{EARB}}{\textrm{GCt}}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>Or, in mathematical terms:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac {x}{n}&amp;=\frac {y}{z}
+\\
+\\
+\\
+\frac {z}{n}&amp;=\frac {y}{x}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>Let’s test this equivalency out with our original report values:</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="center">
+<strong>NDiP</strong> (<span class="math inline">\(n\)</span>)</th>
+<th align="center">
+<strong>GCt</strong> (<span class="math inline">\(x\)</span>)</th>
+<th align="center">
+<strong>EARB</strong> (<span class="math inline">\(y\)</span>)</th>
+<th align="center">
+<strong>ADC</strong> (<span class="math inline">\(c\)</span>)</th>
+<th align="center">
+<strong>DAR</strong> (<span class="math inline">\(z\)</span>)</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">30</td>
+<td align="center">$131,440.30</td>
+<td align="center">$203,460.50</td>
+<td align="center">$4,381.34</td>
+<td align="center">46.44</td>
+</tr></tbody>
+</table></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
+<span class="co"># 1. GCt divided by NDiP equals ADC</span>
+<span class="fl">131440.30</span><span class="op">/</span><span class="fl">30</span>
+<span class="co">#&gt; [1] 4381.343</span>
+
+<span class="co"># 2. EARB divided by DAR equals ADC</span>
+<span class="fl">203460.50</span><span class="op">/</span><span class="fl">46.43793010499292</span>
+<span class="co">#&gt; [1] 4381.343</span>
+
+<span class="co"># 3. EARB divided by GCt equals the DAR Ratio</span>
+<span class="fl">203460.50</span><span class="op">/</span><span class="fl">131440.30</span>
+<span class="co">#&gt; [1] 1.547931</span>
+
+<span class="co"># 4. DAR divided by NDiP equals the DAR Ratio</span>
+<span class="fl">46.43793010499292</span><span class="op">/</span><span class="fl">30</span>
+<span class="co">#&gt; [1] 1.547931</span></code></pre></div>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac {131,440.30}{30}&amp;=\dfrac {203,460.50}{46.43793}
+\\
+\\
+\\
+\dfrac {46.43793}{30}&amp;=\dfrac {203,460.50}{131,440.30}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<p>Again, you’ll want to include all of the decimals in the calculation for absolute accuracy, but:</p>
+<ol style="list-style-type: decimal">
+<li><p>the <strong>total Gross Charges</strong> divided by the <strong>Number of Days in the Period</strong> is equal to the <strong>Ending AR Balance</strong> divided by the average <strong>Days in AR</strong>. Not only that,</p></li>
+<li><p>the average <strong>Days in AR</strong> divided by the <strong>Number of Days in the Period</strong> is equal to the <strong>Ending AR Balance</strong> divided by the <strong>total Gross Charges</strong>.</p></li>
+</ol>
+<p>This is an important relationship called the <strong>DAR Ratio</strong> that we’ll explore in depth in the next chapter.</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+</div>
+<div id="formula-quick-reference" class="section level2" number="3.7">
+<h2>
+<span class="header-section-number">3.7</span> Formula Quick Reference<a class="anchor" aria-label="anchor" href="#formula-quick-reference"><i class="fas fa-link"></i></a>
+</h2>
+<p>The following table contains a summary of each of the formulas we have discussed in this chapter.</p>
+<p><span class="math display">\[\\[3pt]\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th><strong>Name</strong></th>
+<th><strong>Formula</strong></th>
+<th><strong>Variable Form</strong></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>DAR<sup>1</sup>
+</td>
+<td>
+<code>EARB</code> / (<code>GCt</code> / <code>NDiP</code>)</td>
+<td><span class="math inline">\(y \div (x \div n) = z\)</span></td>
+</tr>
+<tr class="even">
+<td>DAR<sup>2</sup>
+</td>
+<td>
+<code>EARB</code> / <code>ADC</code>
+</td>
+<td><span class="math inline">\(y \div c = z\)</span></td>
+</tr>
+<tr class="odd">
+<td>GCt<sup>1</sup>
+</td>
+<td>(<code>EARB</code> x <code>NDiP</code>) / <code>DAR</code>
+</td>
+<td><span class="math inline">\((y \times n) \div z = x\)</span></td>
+</tr>
+<tr class="even">
+<td>GCt<sup>2</sup>
+</td>
+<td>
+<code>NDiP</code> x <code>ADC</code>
+</td>
+<td><span class="math inline">\(n \times c = x\)</span></td>
+</tr>
+<tr class="odd">
+<td>EARB<sup>1</sup>
+</td>
+<td>(<code>DAR</code> x <code>GCt</code>) / <code>NDiP</code>
+</td>
+<td><span class="math inline">\((z \times x) \div n = y\)</span></td>
+</tr>
+<tr class="even">
+<td>EARB<sup>2</sup>
+</td>
+<td>
+<code>DAR</code> x <code>ADC</code>
+</td>
+<td><span class="math inline">\(z \times c=y\)</span></td>
+</tr>
+<tr class="odd">
+<td>NDiP<sup>1</sup>
+</td>
+<td>(<code>DAR</code> x <code>GCt</code>) / <code>EARB</code>
+</td>
+<td><span class="math inline">\((z \times x) \div y = n\)</span></td>
+</tr>
+<tr class="even">
+<td>NDiP<sup>2</sup>
+</td>
+<td>
+<code>GCt</code> / <code>ADC</code>
+</td>
+<td><span class="math inline">\(x \div c={n}\)</span></td>
+</tr>
+<tr class="odd">
+<td>ADC<sup>1</sup>
+</td>
+<td>
+<code>GCt</code> / <code>NDiP</code>
+</td>
+<td><span class="math inline">\(x \div n = c\)</span></td>
+</tr>
+<tr class="even">
+<td>ADC<sup>2</sup>
+</td>
+<td>
+<code>EARB</code> / <code>DAR</code>
+</td>
+<td><span class="math inline">\(y \div z = c\)</span></td>
+</tr>
+<tr class="odd">
+<td>DAR <em>Ratio</em><sup>1</sup>
+</td>
+<td>
+<code>EARB</code> / <code>GCt</code>
+</td>
+<td><span class="math inline">\(y \div x\)</span></td>
+</tr>
+<tr class="even">
+<td>DAR <em>Ratio</em><sup>2</sup>
+</td>
+<td>
+<code>DAR</code> / <code>NDiP</code>
+</td>
+<td><span class="math inline">\(z \div n\)</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="the-dar-formula.html"><span class="header-section-number">2</span> The DAR Formula</a></div>
+<div class="next"><a href="the-dar-ratio.html"><span class="header-section-number">4</span> The DAR Ratio</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#building-on-the-dar-formula"><span class="header-section-number">3</span> Building on the DAR Formula</a></li>
+<li><a class="nav-link" href="#ending-ar-balance-required-for-x-dar"><span class="header-section-number">3.1</span> Ending AR Balance Required for \(x\) DAR</a></li>
+<li><a class="nav-link" href="#total-gross-charges-required-for-x-dar"><span class="header-section-number">3.2</span> Total Gross Charges Required for \(x\) DAR</a></li>
+<li><a class="nav-link" href="#number-of-days-required-for-x-dar"><span class="header-section-number">3.3</span> Number of Days Required for \(x\) DAR</a></li>
+<li><a class="nav-link" href="#average-daily-charge-required-for-x-dar"><span class="header-section-number">3.4</span> Average Daily Charge Required for \(x\) DAR</a></li>
+<li><a class="nav-link" href="#average-daily-charge-related-formulas"><span class="header-section-number">3.5</span> Average Daily Charge-Related Formulas</a></li>
+<li><a class="nav-link" href="#relationship-between-the-dar-variables"><span class="header-section-number">3.6</span> Relationship Between the DAR Variables</a></li>
+<li><a class="nav-link" href="#formula-quick-reference"><span class="header-section-number">3.7</span> Formula Quick Reference</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/03-building-on.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/03-building-on.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>The Art of DAR</strong>: Days in Accounts Receivable in the Healthcare Revenue Cycle" was written by Andrew Bruce, RHIT, CPC, CPPM, RH-CBS. It was last built on 2021-11-30.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

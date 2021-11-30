@@ -1,0 +1,416 @@
+# The DAR Ratio
+
+## Overview of Ratio Types
+
+A **ratio** is a mathematical parameter used to express the relationship of one quantity to another. To calculate a ratio, one quantity is divided by another. The quotient can be greater than 1 or less than 1. For example, if seven men and five women were in a group, the ratio of men to women would be $\dfrac {7}{5}$. This may also be written as **7:5** and verbalized as "7 to 5."
+
+The numbers 7 and 5 have no common factors, so this ratio cannot be simplified any further. However, if the group consisted of 6 men and 10 women, the ratio would be **6:10**. Because the numbers in this ratio have a common factor of 2, the ratio can be simplified by dividing each number by 2, which simplifies the ratio to **3:5**.
+
+One more thing of note: since a ratio can be expressed as a fraction, the quotient of the fraction is another viable way of displaying a ratio:
+
+<br>
+
+$$
+\begin{aligned}
+7:5 = \dfrac {7}{5}&= 1.4\\
+\\
+\\
+3:5 = \dfrac {3}{5}&=0.6\\
+\\
+\end{aligned}
+$$
+
+<br>
+
+A **proportion** is a *type* of ratio in which $x$ is a portion of the whole $(x+y)$. In a proportion, the numerator is always included in the denominator. For example, if two women out of a group of 10 over the age of 50 have had breast cancer, where $x = 2$ (women who have had breast cancer) and $y=8$ (women who have not had breast cancer), the calculation would be 2 divided by 10. The proportion of women who have had breast cancer is $0.2$ or $20\%$.
+
+<br>
+
+$$
+\begin{aligned}
+\dfrac {x}{(x+y)}&= \dfrac {2}{(2+8)}\\
+\\
+\dfrac {2}{(2+8)}&=\dfrac {2}{10}\\
+\\
+\dfrac {2}{10}&=0.2\\
+\\
+0.2 \times 100&=20\% \\
+\\
+\end{aligned}
+$$
+
+<br>
+
+A **rate**[^4] is another *type* of ratio in which there is a distinct relationship between the numerator and denominator and the denominator often implies a large base population. A measure of time is often an intrinsic part of the denominator. The basic rule of thumb for calculating a rate is to indicate the number of times something *actually* happened in relation to the number of times it *possibly could have* happened (**actual**/**potential**).
+
+[^4]: The term *rate* is often used loosely to refer to rate, proportion, percentage, and ratio. For this reason, it is important to be aware of how any measure being reported has actually been defined and calculated.
+
+For example, let's say you have been eating out often in the past few weeks. To calculate the rate of meals you have eaten out in one week, divide the number of meals that you ate out (for example, 13) by the number of meals you could have eaten out (21). The calculation is:
+
+<br>
+
+$$
+\begin{aligned}
+\dfrac {\textrm{Part}}{\textrm{Base}}&= {\textrm{Rate}}\\
+\\
+\dfrac {13}{21}&= 0.619047619047619\\
+\\
+0.6191 \times 100&=61.9\% \\
+\\
+\end{aligned}
+$$
+
+<br>
+
+## A Note on Percentages
+
+As you can see above, the solutions to the Proportions and Rates can be expressed as a percentage, while the Ratio cannot. There is a very good reason for this, though one that doesn't immediately present itself. Let's look at the definitions again:
+
+<br>
+
+Ratio
+
+:   A mathematical parameter used to express the relationship of one quantity to another. To calculate a ratio, one quantity is divided by another.
+
+Proportion
+
+:   A type of ratio in which the numerator (x) is a portion of the whole (x + y). In a proportion, *the numerator is always included in the denominator.*
+
+Rate
+
+:   A rate is another type of ratio in which there is a distinct relationship between the numerator and denominator and the denominator often implies a large base population.
+
+Percentage
+
+:   A unit of *proportion* expressed as a fraction of 100. A percentage is a *dimensionless* number that has no unit of measurement.
+
+<br>
+
+A proportion and a rate can be represented as a percentage because their numerators are inherently part of their denominators. This is not so for a ratio as it's only comparing one number to another, even though the two numbers might be in the same group. Something about each quantity separates it from the other and, as such, we want to know how many are in group 1 and how many are in group 2. With anything so simple, it can be easy to over think the idea and end up misunderstanding it.
+
+Look at the Ratio example again. There are seven men and five women in a group. We want to know how many men there are and how many women there are. Nothing more, nothing less. Thus, the ratio of men to women in this group is **7 to 5**.
+
+To compare, if we wanted to know the *proportions* of men and women in this group, we would have to involve a numerical representation of the group as a whole. There are seven men and five women in the group, and this group contains a total of twelve people. We can now calculate these proportions, representing the results as percentages:
+
+<br>
+
+$$
+\begin{aligned}
+\dfrac {x}{(x+y)}= \dfrac {7}{(7+5)}&=\dfrac {7}{12}\\
+\\
+\dfrac {7}{12}=0.5833 \times 100&=58.33\% \ {\textrm{men}}\\
+\\
+\\
+\dfrac {y}{(x+y)}= \dfrac {5}{(7+5)}&=\dfrac {5}{12}\\
+\\
+\dfrac {5}{12}=0.4167 \times 100&=41.67\% \ {\textrm{women}}\\
+\end{aligned}
+$$
+
+<br>
+
+The particular aspect of a ratio that seems to confuse the most is that, as a fraction, you can divide one number by the other, leaving you with one number representing the relationship between those two numbers. This seems counterintuitive. How will **1.4** help me? What was wrong with **7:5**?
+
+$\\$
+
+Well, let's say that you were taught that, as a rule of thumb:
+
+> *your monthly **Ending Accounts Receivable Balance** should never be more than **1.5 times** your **total Gross Monthly Charges**.*
+
+$\\$
+
+Suppose that your Ending AR Balance is **\$203,460.50** and your total Gross Monthly Charges are **\$131,440.30**. We can represent this relationship as a ratio, and then divide:
+
+$\\$
+
+$$
+\begin{aligned}
+203,460.50 &: 131,440.30
+\\
+\\
+\dfrac {203,460.50}{131,440.30}&= 1.548
+\end{aligned}
+$$
+
+$\\$
+
+Ok, that's great but what does that mean? Well, lets multiply our **total Gross Monthly Charges** by 1.5:
+
+$\\$
+
+$$
+\begin{aligned}
+131440.30 \times 1.5 &= 197,160.45
+\\
+\\
+203,460.50 &> 197,160.45
+\end{aligned}
+$$
+
+$\\$
+
+It looks like our Ending AR Balance *is* **greater than 1.5 times** our total Gross Monthly Charges. In fact, it's approximately ***1.548 times greater***, which we found out by dividing the `EARB` by the `GCt`. Calculating this ratio, it's 'ideal' counterpart and comparing the two on a daily basis can give you more precise insight about your practice's billing and reimbursement performance than just `DAR` alone. It's also the subject of the next section, a tool I've come to call the DAR Ratio.
+
+## Using The DAR Ratio
+
+If you remember from Chapter 3, we had established two formulas of equivalency, showing the interdependence of the DAR variables:
+
+$$
+\begin{aligned}
+\dfrac {\textrm{GCt}}{\textrm{NDiP}} &= \dfrac {\textrm{EARB}}{\textrm{DAR}}
+\\
+\\
+\\
+\dfrac {\textrm{DAR}}{\textrm{NDiP}} &= \dfrac {\textrm{EARB}}{\textrm{GCt}}
+\end{aligned}
+$$
+
+$\\$
+
+From these dependencies, we can explore several interesting avenues. One is the fact that with every passing day, a one is added to the denominator of the formulas for both **Average Daily Charge** and the **Ideal DAR Ratio**. Another is that the maxim of "never letting your `EARB` exceed 1.5 times your `GCt`" seems to break down pretty quickly, as the `NDiP` climbs. But these are just two of a handful we'll explore. Right now, let's take a look at the Ideal DAR Ratio. The table you see below is a sort of key, generating this "ideal" DAR ratio. Why is it "ideal"? Let's take a look.
+
+To begin, I set the desired `DAR` at **39.445** and began my `EARB` at an arbitrary number and increased it daily by 1000. Using the formulas from Chapter 3, I calculated the `GCt` and `ADC`. Finally, to get the "Ideal" `DAR` Ratio, I divided the EARB by the GCt. The following table is an example of this output:
+
+$$\\[3pt]$$
+
+```{r include=FALSE}
+library(tidyverse)
+DAR_Ratio_39_10 <- read.csv("data/DAR_Ratio_39_10.csv")
+DAR_Ratio_39_10 <- DAR_Ratio_39_10 %>%
+janitor::clean_names()
+```
+
+```{r echo=FALSE}
+library(gt)
+gt(data = DAR_Ratio_39_10) %>%
+    tab_header(
+        title = "Table 1. Ideal DAR Ratio Key Example.",
+        subtitle = NULL) %>%
+    cols_align(align = "left",columns = 1) %>%
+        cols_align(align = "left",
+               columns = 2) %>%
+        cols_align(align = "left",
+               columns = 3) %>%
+        cols_align(align = "left",
+               columns = 4) %>%
+        cols_align(align = "left",
+               columns = 5) %>%
+        cols_align(align = "left",
+               columns = 6) %>%
+        cols_label("n_di_p" = md("**NDiP**"),
+        `earb` = md("**EARB**"),
+        `g_ct` = md("**GCt**"),
+        `adc` = md("**ADC**"),
+        `dar` = md("**DAR**"),
+        `ratio_benchmark` = md("**Ideal Ratio**")
+        )
+```
+
+As you can see, dividing either the `EARB` by the `GCt`, or the `DAR` by the `NDiP` will both give you the "Ideal" Ratio for each day in the period. The following two tables contain instructions on how to construct this Ratio Key in any spreadsheet program. The second table is a simplified formula for use if you need to quickly know the Ideal Ratio on a certain day of the period that you're measuring.
+
+$$\\[3pt]$$
+
+|       | **A**  | **B**  |     **C**     |  **D**   |     **E**     |     **F**     |
+|:-----:|:------:|:------:|:-------------:|:--------:|:-------------:|:-------------:|
+| **1** | *NDiP* | *EARB* |     *GCt*     |  *ADC*   |     *DAR*     | *Ideal Ratio* |
+| **2** |   1    | 200000 | `=(A2*B2)/E2` | `=C2/A2` | `Desired DAR` |   `=B2/C2`    |
+| **3** |   2    | 201000 | `=(A3*B3)/E3` | `=C3/A3` |    `=$E$2`    |   `=B3/C3`    |
+
+: Ideal DAR Ratio Key Instructions for a Spreadsheet Program
+
+|       | **A**  |     **B**     |     **C**     |
+|:-----:|:------:|:-------------:|:-------------:|
+| **1** | *NDiP* |     *DAR*     | *Ideal Ratio* |
+| **2** |   1    | `Desired DAR` |   `=B2/A2`    |
+| **3** |   2    |    `=$E$2`    |   `=B3/A3`    |
+
+: Simplified Ideal DAR Ratio Key Instructions
+
+\newpage
+
+The following table is simply a quick reference for the Ideal Ratios of commonly used Number of Days in Periods (NDiP).
+
+```{r include=FALSE}
+library(tidyverse)
+NDIP_DAR_FINAL <- read.csv("data/NDIP_DAR_FINAL.csv")
+NDIP_DAR_FINAL <- NDIP_DAR_FINAL %>%
+janitor::clean_names()
+```
+
+```{r echo=FALSE, paged.print=TRUE}
+library(gt)
+library(gtsummary)
+NDIP_DAR_FINAL %>%
+    gt(groupname_col = "group", rowname_col = "row") %>%
+    tab_header(title = md("**Days in AR: Key Values**"),
+    subtitle = "Ideal Ratios & Optimal Percentages for Common NDiPs"
+  ) %>%
+      tab_options(
+    heading.subtitle.font.size = 14,
+    heading.align = "left",
+    table.border.top.color = "#D3D3D3",
+    column_labels.border.bottom.color = "#D3D3D3",
+    column_labels.border.bottom.width= px(3)) %>% 
+    cols_align(align = "left",columns = 1) %>%
+    cols_align(align = "left",columns = 2) %>%
+    cols_align(align = "left",columns = 3) %>%
+    cols_align(align = "left",columns = 4) %>%
+    cols_align(align = "left",columns = 5) %>%
+    cols_align(align = "left",columns = 6) %>%
+    cols_align(align = "left",columns = 7) %>%
+    cols_align(align = "left",columns = 8) %>%
+    cols_label("n_di_p" = md("**NDiP**"),
+               `dar` = md("**DAR**"),
+               `ideal` = md("**Ideal Ratio**"),
+               `gct` = md("**Gross Charges**"),
+               `earb` = md("**Ending AR**"),
+               `difference` = md("**Difference**"),
+               `row` = md("**Row**"),
+               `group` = md("**Group**")) %>%
+    opt_row_striping(row_striping = TRUE) %>% 
+    opt_table_outline(style = "solid", width = px(3), color = "#D3D3D3") %>% 
+    opt_table_lines(extent = c("all")) %>% 
+    opt_table_font(font = list(
+      google_font(name = "Fira Mono"),"Cochin", "Serif")) %>% 
+    tab_source_note("DATA: Andrew Bruce, RHIT, CPC, CPPM, RH-CBS.") %>%
+    tab_footnote(footnote = "Ideal Ratio for 39.445 DAR.", locations = cells_column_labels(columns = c(ideal))
+                  )
+```
+
+
+## Comparing the *Ideal* Ratio to the *Actual* Ratio
+
+In this section, we will use the **DAR Ratio** on a mock data set containing a year's worth of financial data from a physician's office. My intention in doing so is to illustrate the relationship between the Ending AR Balance and the Gross Charges on a month-to-month basis and how once this relationship is understood, you will be able to quickly understand where your business or organization is at any time whether its the first month, third quarter, or last week of the year.
+
+$$\\[3pt]$$
+
+```{r include=FALSE}
+DAR_Feedback_Month <- read.csv("data/DAR_Feedback_Month.csv")
+DAR_Feedback_Month <- DAR_Feedback_Month %>%
+janitor::clean_names()
+```
+
+```{r echo=FALSE}
+library(gt)
+DAR_Feedback_Month %>%
+    gt() %>%
+    tab_header(title = md("**Sample Monthly Financial Data for Physician Group**")) %>%
+    summary_rows(
+        groups = NULL,
+        columns = c(g_ct, earb, adc, dar, actual_ratio, ideal_ratio, difference),
+        fns = list(
+        Average = "mean",
+        Median = "median")) %>%
+    cols_align(align = "left",columns = 1) %>%
+    cols_align(align = "left",columns = 2) %>%
+    cols_align(align = "left",columns = 3) %>%
+    cols_align(align = "left",columns = 4) %>%
+    cols_align(align = "left",
+               columns = 5) %>%
+    cols_align(align = "left",
+               columns = 6) %>%
+    cols_align(align = "left",
+               columns = 7) %>%
+    cols_align(align = "left",
+               columns = 8) %>%
+    cols_align(align = "left",
+               columns = 9) %>%
+    cols_label("i_month" = md("**Month**"),
+               `ndip` = md("**NDiP**"),
+               `g_ct` = md("**GCt**"),
+               `earb` = md("**EARB**"),
+               `adc` = md("**ADC**"),
+               `dar` = md("**DAR**"),
+               `actual_ratio` = md("**Actual**"),
+               `ideal_ratio` = md("**Ideal**"),
+               `difference` = md("**Difference**")) %>%
+        tab_spanner(
+            label = md("**DAR Ratio**"),
+            columns = c(actual_ratio, ideal_ratio, difference)) %>%
+      tab_footnote(footnote = "Ideal Ratio for 39.445 DAR.", locations = cells_column_labels(columns = c(ideal_ratio))
+                  ) %>%
+      tab_footnote(footnote = "USD($), rounded to whole numbers.", locations = cells_column_labels(columns = c(g_ct, earb, adc))
+                  ) %>%
+    data_color(
+        columns = c(g_ct, earb, dar),
+        colors = scales::col_numeric(paletteer::paletteer_d(palette = "ggsci::red_material") %>% as.character(),domain = NULL))
+```
+
+$$\\[3pt]$$
+
+The immediate takeaway from the data is that if the **difference** between the *Actual* and *Ideal* Ratio is **positive**, the DAR is over the threshold set by the Ideal Ratio (39.445, in this case.) If the **difference** is **negative**, the DAR is under the threshold. Remember, the DAR would meet the desired threshold (39.445) if the difference was zero, but, as you'll find, this will never be the case, as the `GCt` and `EARB` will never be the exact same number.
+
+So, we now have an indicator of DAR that, although dependent upon the number of days, is independent of dollar amounts. It would be nice to know if we could find an optimal dollar amount for both the `GCt` and `EARB`, if given the `NDiP`, to achieve the desired `DAR` threshold. Let's see if our old friend, the proportion, can help us out.
+
+## Optimal Percentages of GCt and EARB for $x$ DAR
+
+In this section, I'll demonstrate the calculation for the optimal proportions (as percentages) of `GCt` and `EARB` for $x$ `DAR`. One of the main takeaways you will come to find is just how incredibly sensitive `DAR` is to the **Number of Days in the Period** that you are measuring. We will look at monthly, bimonthly, and quarterly data to show this sensitivity.
+
+The following is a table of sample data wherein each row contains a **31-day** month's financial activity, sorted by `DAR` in descending order. In addition to the *DAR Ratio* measurements, there are several new figures included. Under the *Percentages* spanner, the first two figures represent the individual proportions of **Gross Charges** and **Ending AR** to the whole of those two figures added together. The *Difference* percentage is that of the difference between the Gross Charges and Ending AR in relation to the whole figure as well.
+
+$$\\[3pt]$$
+
+```{r include=FALSE}
+NDIP_31 <- read.csv("data/NDIP_31.csv")
+NDIP_31 <- NDIP_31 %>%
+janitor::clean_names()
+```
+
+```{r echo=FALSE, paged.print=TRUE}
+library(gt)
+NDIP_31 %>%
+    gt() %>%
+    cols_hide(columns = c(i_ndip, g_ct_earb)) %>% 
+    tab_header(title = md("**Analysis of Sample Financial Data of 31-Day Months**")) %>%
+    cols_align(align = "left",columns = 1) %>%
+    cols_align(align = "left",columns = 2) %>%
+    cols_align(align = "left",columns = 3) %>%
+    cols_align(align = "left",columns = 4) %>%
+    cols_align(align = "left",columns = 5) %>%
+    cols_align(align = "left",columns = 6) %>%
+    cols_align(align = "left",columns = 7) %>%
+    cols_align(align = "left",columns = 8) %>%
+    cols_align(align = "left",columns = 9) %>%
+    cols_align(align = "left",columns = 10) %>%
+    cols_align(align = "left",columns = 11) %>%
+    cols_align(align = "left",columns = 12) %>%
+    cols_label("i_ndip" = md("**NDiP**"),
+               `gct` = md("**GCt**"),
+               `earb` = md("**EARB**"),
+               `difference` = md("**Diff**"),
+               `g_ct_earb` = md("**GCt+EARB**"),
+               `gct_2` = md("**GCt (%)**"),
+               `earb_2` = md("**EARB (%)**"),
+               `difference_2` = md("**Diff (%)**"),
+               `dar` = md("**DAR**"),
+               `actual` = md("**Actual**"),
+               `ideal` = md("**Ideal**"),
+               `difference_1` = md("**Diff**")) %>%
+        tab_spanner(label = md("**Percentages**"),columns = c(gct_2, earb_2, difference_2)) %>%
+        tab_spanner(label = md("**DAR Ratio**"),columns = c(actual, ideal, difference_1)) %>%
+      tab_footnote(footnote = "Ideal Ratio for 39.445 DAR.", locations = cells_column_labels(columns = c(ideal))
+                  ) %>%
+      tab_footnote(footnote = "USD($), rounded to whole numbers.", locations = cells_column_labels(columns = c(gct, earb, difference, g_ct_earb))
+                  ) %>%
+    data_color(
+        columns = c(gct, earb, dar),
+        colors = scales::col_numeric(paletteer::paletteer_d(palette = "ggsci::red_material") %>% as.character(),domain = NULL))
+```
+
+As you can see, these percentages are independent of the `GCt` and `EARB` dollar amounts. And, from looking through the data to just where the DAR crosses from passing to failing, we can see that, for an `NDiP` of *31*, the optimal percentage for `GCt` is approximately **44.01%**, while `EARB`'s optimal percentage is **55.99%**. The optimal *difference* between the two amounts is **11.99%**. If `GCt` **falls below** 44.01%, the DAR is failing. If `EARB` **rises above** 55.99%, the DAR is failing. If the *difference* between the two **rises above** 11.99%, the DAR is failing.
+
+**The DAR Fails IF:**
+
+-   `GCt` **falls below** 44.01%
+
+-   `EARB` **rises above** 55.99%
+
+-   the *Difference* between `GCt` and `EARB` **rises above** 11.99%
+
+|       |       |             |       |       |       |       |       |       |       |        |       |       |       |
+|:-----:|:-----:|:-----------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:------:|:-----:|:-----:|:-----:|
+| **A** | **B** |    **C**    | **D** | **E** | **F** | **G** | **H** | **I** | **J** | **K**  | **L** | **M** | **N** |
+| NDiP  |  GCt  |    EARB     | Diff  | GC+AR |  GC%  |  AR%  | Diff% |  ADC  |  DAR  | Actual | Ideal | Diff  |  KPI  |
+|   1   | 2000  | (N2\*B2)/A2 | B2-C2 | B2+C2 | B2/E2 | C2/E2 | D2/E2 | B2/A2 | C2/I2 | C2/B2  | N2/A2 | K2-L2 |  39   |
+
+: Instructions for Constructing the Spreadsheet
